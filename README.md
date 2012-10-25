@@ -6,4 +6,4 @@ in chrome go to chrome://extensions
 
 load unpacked extensions, point it to the root of this repo
 
-![Scrot](raw.github.com/philipforget/bucksbalance/master/img/scrot.png)
+![Scrot](//raw.github.com/philipforget/bucksbalance/master/img/scrot.png)
