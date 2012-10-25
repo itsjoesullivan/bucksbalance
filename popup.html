@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <style type="text/css" media="screen">
+            .hidden {
+                display: none;
+            } 
+        </style>
+    </head>
+    <body>
+        <div id="credentials" class="hidden">
+            <form action="#">
+                <label for="card_number">Card Number</label>
+                <input type='text' id="card_number">
+                <label for="card_pin">Card Pin</label>
+                <input type='text' id="card_pin">
+                <input type="submit" value="Get Dat Balance">
+            </form>
+        </div>
+        <div id="data">
+            Fetching card balance ...
+        </div>
+    </body>
+    <script src="lib/js/jquery-1.7.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/bucksbalance.popup.js" type="text/javascript" charset="utf-8"></script>
+</html>
