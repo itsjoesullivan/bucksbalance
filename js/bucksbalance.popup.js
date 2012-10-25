@@ -8,8 +8,6 @@
 
 
     function balance_handler(data){
-        console.log("received data");
-        console.log(data);
         if(data.success){
             data_div.show();
             creds_div.hide();
@@ -19,6 +17,9 @@
             if(data.login_required){
                 data_div.hide();
                 creds_div.removeClass('hidden');
+            }
+            else {
+                data_div.html("Error fetching balance");
             }
         }
     }

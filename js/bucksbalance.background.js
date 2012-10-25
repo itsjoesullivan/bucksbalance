@@ -24,13 +24,27 @@
             'Card.Number': number,
             'Card.Pin': pin
         }).success(function(data){
-            var response_html = $(data),
-                balance = response_html.find('.fetch_balance_value').text();
+            var has_balance = data.indexOf('fetch_balance_value') > -1,
+                balance, start;
+
+            if(has_balance){
+                start = data.indexOf('fetch_balance_value');
+                balance = data.slice(
+                    start + 21,
+                    start + data.slice(start, start+100).indexOf('</span'));
+
+                sendResponse({
+                    'success': true,
+                    'balance': balance
+                });
+            }
+            else {
+                sendResponse({
+                    'success': false,
+                    'error': true
+                });
+            }
             
-            sendResponse({
-                'success': true,
-                'balance': balance
-            });
         }).error(function(data){
             sendResponse({
                 'success': false,
