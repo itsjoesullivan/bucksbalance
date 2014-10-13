@@ -1,9 +1,21 @@
-Good lord this code is bad, but I wanted it to be done in 10 minutes.
+# BucksBalance
 
-Clone the repo
+See your starbucks card balance from the command line.
 
-in chrome go to chrome://extensions
+```bash
+# Install from pypi
+sudo pip install bucksbalance
+# Or development version, from this repo root
+sudo pip install -e .
 
-load unpacked extensions, point it to the root of this repo
+# Set up your .bucksbalance config
+cat << EOF > ~/.bucksbalance
+{
+    "cards": {
+        "yourcard": (1234123412341234, 12341234)
+    }
+}
+EOF
 
-![Scrot](//raw.github.com/philipforget/bucksbalance/master/img/scrot.png)
+bucksbalance
+```
