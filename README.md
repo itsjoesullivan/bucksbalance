@@ -3,9 +3,7 @@
 See your starbucks card balance from the command line.
 
 ```bash
-# Install from pypi
-sudo pip install bucksbalance
-# Or development version, from this repo root
+# From this repo's root
 sudo pip install -e .
 
 # Set up your .bucksbalance config
